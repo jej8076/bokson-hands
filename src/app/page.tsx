@@ -27,6 +27,7 @@ export default function Home() {
               소창 면사의 자연스러운 질감과 내구성을 통해 <br />시간이 흘러도 변하지 않는 가치를 전달합니다<br />
               우리의 제품은 단순한 소비가 아닌, 삶과 함께 성장하는 동반자입니다
             </p>
+
             <div className="space-y-4">
               <Link
                 href="/materials"
