@@ -7,9 +7,13 @@
 *.ipr
 out/
 
-# dependencies
-/node_modules
-/.pnp
+# OS
+.DS_Store
+*.pem
+
+### Frontend (Next.js) ###
+node_modules/
+.pnp
 .pnp.*
 .yarn/*
 !.yarn/patches
@@ -17,19 +21,8 @@ out/
 !.yarn/releases
 !.yarn/versions
 
-# testing
-/coverage
-
-# next.js
-/.next/
-/out/
-
-# production
-/build
-
-# misc
-.DS_Store
-*.pem
+.next/
+coverage/
 
 # debug
 npm-debug.log*
@@ -37,8 +30,9 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# env files (can opt-in for committing if needed)
+# env files (운영용 실제 파일은 추적 X, 템플릿은 추적)
 .env*
+!.env.example
 
 # vercel
 .vercel
@@ -46,3 +40,14 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+### Backend (Gradle / Spring Boot) ###
+.gradle/
+**/build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# 운영용 외부 설정 (실제 파일은 추적 X, 템플릿/디렉토리는 추적)
+backend/config/application.yml
+backend/config/application-*.yml
+!backend/config/*.example
+!backend/config/.gitkeep
